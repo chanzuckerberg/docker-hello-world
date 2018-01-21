@@ -1,7 +1,9 @@
+services:
+- docker
 language: go
 go:
 - 1.8.x
 - 1.9.x
 - master
 script:
-- make all
+- docker build --rm -t hello-world .
