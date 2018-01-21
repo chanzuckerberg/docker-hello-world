@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 COPY Makefile *.go ./
 RUN apk update && \
 	apk upgrade && \
-	apk all \
+	apk add \
 		git \
 		make && \
 	make all
